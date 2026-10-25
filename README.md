@@ -9,6 +9,8 @@
 
 Off-road variant of Pole Racer: same engine, modes, circuits and controls, with 4x4 vehicles, dirt terrain and a bumpy road. Single self-contained `offroad.html`, no dependencies.
 
+You can play it here: https://tagtthespellcaster.github.io/Dust-Racer/
+
 ## What differs from Pole Racer
 
 | | Pole Racer | Dust Racer |
