@@ -50,15 +50,15 @@ body.touch #ctl{display:flex}
 /* ================= CONSTANTS ================= */
 const W=640,H=480,HALF=W/2;
 const SEG=200,RUMBLE=3,ROAD=1200,DD=170,CAMH=1000;
-const HILLA=700;
+const HILLA=1430;
 const CAMD=1/Math.tan(50*Math.PI/180);
 const PLAYERZ=CAMH*CAMD*1.14;
 const HORIZON=188,VS=H/2*1.25;
 const MAXSPD=SEG*38,LOCAP=0.55,CARW=480,CAMFOLLOW=0.55,FOG=5;
 const U_PLAYER=CAMD/PLAYERZ*HALF;
 const GROUND_Y=HORIZON+(CAMD/PLAYERZ)*CAMH*VS;
-const VERSION='1.17';
-const DRIVES=[{name:'EASY',k:.55,p:1,tau:0,tm:1,off:0,fl:0,hg:1.5},{name:'INTERMEDIATE',k:1.2,p:.9,tau:.4,tm:1.18,off:.12,fl:.85,ra:8,rs:0,hg:1.8},{name:'EXPERT',k:3.2,p:.4,tau:.7,tm:1.3,off:.22,fl:.50,ra:12,rs:4.5,hg:2.1}];
+const VERSION='1.18';
+const DRIVES=[{name:'EASY',k:.55,p:1,tau:0,tm:1,off:0,fl:0,hg:.7},{name:'INTERMEDIATE',k:1.2,p:.9,tau:.4,tm:1.18,off:.12,fl:.85,ra:8,rs:0,hg:.85},{name:'EXPERT',k:3.2,p:.4,tau:.7,tm:1.3,off:.22,fl:.50,ra:12,rs:4.5,hg:1.0}];
 const START_BACK=400,GRID_GAP=700,LAPS=3,STEP=1/60,PERIOD=1280;
 
 const cv=document.getElementById('c'),ctx=cv.getContext('2d');
@@ -478,7 +478,7 @@ function updateCars(dt,running){
  const LOOK=2400;
  for(const c of cars){
   const seg=segAt(c.dist);
-  let target=running?c.base*(1-.035*Math.abs(seg.curve))*(1-clamp(1.2*(seg.hl||0),-.06,.15)):0,avoid=0;
+  let target=running?c.base*(1-.035*Math.abs(seg.curve))*(1-clamp(1.2*(seg.hl||0),-.08,.25)):0,avoid=0;
   const consider=(od,oo,os)=>{
    const dz=mod(od-c.dist+L/2,L)-L/2;
    if(dz>0&&dz<LOOK){const diff=oo-c.off;

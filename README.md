@@ -1,6 +1,6 @@
 # Dust Racer
 
-![Version](https://img.shields.io/badge/version-1.17-blue)
+![Version](https://img.shields.io/badge/version-1.18-blue)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
@@ -28,7 +28,7 @@ Off-road variant of Pole Racer: same engine, modes, circuits and controls, with 
 
 ## Hills
 
-The circuits now include long climbs and descents on top of the bumps and dips (gradients up to about 9–10%). Uphill reduces acceleration and the top speed you can hold, downhill increases it, so you accelerate more easily and brake less effectively going down. The effect grows from Easy to Expert (Easy only slows noticeably on the steepest climbs). Hills are flattened on bridges and in tunnels and fade in and out around the start line. Opponents slow down uphill and speed up downhill by a smaller amount. The strength is set by `HILLA` (height) and `hg` per driving mode in the source.
+The circuits now include long climbs and descents on top of the bumps and dips (gradients up to about 20%). Uphill reduces acceleration and the top speed you can hold, downhill increases it, so you accelerate more easily and brake less effectively going down. The effect grows from Easy to Expert (Easy only slows noticeably on the steepest climbs). Hills are flattened on bridges and in tunnels and fade in and out around the start line. Opponents slow down uphill and speed up downhill by a smaller amount. The strength is set by `HILLA` (height) and `hg` per driving mode in the source.
 
 ## Rolling over
 
@@ -48,6 +48,7 @@ Open `offroad.html` in a modern browser. Controls, game modes, day/night, minima
 
 ## Changes after 1.0
 
+* **1.18**: Gradients raised to about 20%; the slowing effect per mode was rescaled so that the steepest climbs hold roughly 93% (Easy), 67% (Intermediate) and 41% (Expert) of top speed in HI gear.
 * **1.17**: Climbs and descents added; uphill slows the vehicle, downhill speeds it up.
 * **1.16**: Screenshot key (`K`).
 * **1.15**: Viaduct Run: free-standing waterfall pillars replaced by the same continuous, opaque mountain ranges with animated waterfalls used in Cascade Valley.
